@@ -1,0 +1,22 @@
+{
+	"name": "esthetique",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/javik223/esthetique-placeholder-website.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/javik223/esthetique-placeholder-website/issues"
+	},
+	"homepage": "https://github.com/javik223/esthetique-placeholder-website#readme",
+	"dependencies": {
+		"foundation-sites": "^6.4.0"
+	}
+}
