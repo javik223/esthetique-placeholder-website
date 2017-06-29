@@ -1,0 +1,16 @@
+{
+	"src": {
+		"sass": "src/sass/**/*.scss",
+		"js_folder": "src/js",
+		"js": "src/js/**/*.js",
+		"image": "src/img",
+		"kit": "src/kit/**/*.kit",
+		"typescript": "src/typescript"
+	},
+	"dest": {
+		"css": "assets/css",
+		"js": "assets/js",
+		"image": "assets/img",
+		"html": "."
+	}
+}

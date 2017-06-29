@@ -17,6 +17,19 @@
 	},
 	"homepage": "https://github.com/javik223/esthetique-placeholder-website#readme",
 	"dependencies": {
-		"foundation-sites": "^6.4.0"
+		"foundation-sites": "^6.4.0",
+		"vinyl-buffer": "^1.0.0"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.18.12",
+		"browserify": "^14.4.0",
+		"event-stream": "^3.3.4",
+		"glob": "^7.1.2",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-kit": "^0.3.0",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.0",
+		"vinyl-source-stream": "^1.1.0"
 	}
 }

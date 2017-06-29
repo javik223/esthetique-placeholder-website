@@ -1,0 +1,5 @@
+{
+	"errLogToConsole": true,
+	"outputStyle": "compressed",
+	"includePaths": ["node_modules/foundation-sites/scss", "node_modules/bootstrap/scss"]
+}

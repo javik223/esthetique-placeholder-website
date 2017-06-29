@@ -1,0 +1,191 @@
+@import 'settings';
+@import 'foundation';
+
+@include foundation-typography;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+.grid-x {
+	@include xy-grid;
+}
+
+@include foundation-xy-grid-classes(
+  $base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true
+);
+
+body {
+	background-color: #ffffff;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.content {
+	padding: rem-calc(30);
+	padding-top: 0;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 100;
+
+	@include breakpoint(medium only) {
+		padding: rem-calc(100);
+		padding-top: rem-calc(30);
+	}
+
+	@include breakpoint(large) {
+		height: 100vh;
+		overflow: auto;
+		padding-top: rem-calc(10);
+	}
+}
+
+.spa-image {
+	background-image: url('/assets/img/esthetique-treat-yourself-to-wellness.jpg');
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0;
+	animation: fadeInSlideUpLittle 2s 3s forwards;
+
+	@include breakpoint(medium only) {
+		position: absolute;
+		z-index: 0;
+		width: 50vw !important;
+		right: 0;
+		height: 100%;
+	}
+}
+
+.sub-head {
+	font-weight: 100;
+	color: rgba(#686868, 0.5);
+	font-family: Cardo, Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	margin-top: rem-calc(10);
+	opacity: 0;
+	animation: fadeInSlideUp 4s 2s forwards;
+}
+
+.logo {
+	opacity: 0;
+	animation: fadeIn 5s 3s forwards;
+
+	@include breakpoint(small only) {
+		width: rem-calc(150);
+	}
+}
+
+.addresses {
+	font-family: Helvetica, sans-serif;
+	font-weight: 100;
+	color: #686868;
+	margin-top: rem-calc(30);
+
+	@include breakpoint(large) {
+		margin-top: rem-calc(70);
+	}
+	* {
+		opacity: 0;
+		animation: fadeInSlideUp 2s 6s forwards;
+	}
+
+	h5 {
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 0.8em;
+	}
+
+	p {
+		color: #686868;
+		font-size: 0.7em;
+		margin-bottom: 0.8em;
+		line-height: 1.8em;
+
+		@include breakpoint(medium) {
+			font-size: 0.9em;
+		}
+	}
+
+	strong {
+		font-weight: 400;
+	}
+}
+
+.main-header {
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+	margin-top: rem-calc(-30);
+}
+
+.social-icons {
+	* {
+		animation: fadeInSlideUp 2s 10s forwards;
+	}
+
+	img {
+		padding-right: rem-calc(20);
+		transition: all 0.3s ease-in-out;
+		opacity: 0.5;
+
+		@include breakpoint(small only) {
+			height: rem-calc(15);
+		}
+
+		&:hover {
+			transform: scale(1.2);
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes fadeInSlideUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInSlideUpLittle {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 10%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInSlideDown {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
